@@ -53,8 +53,10 @@
 
     Client.connected = false;
     Client.connect = function() {
+        var loc = window.location.href;
+        var dir = loc.substring(0, loc.lastIndexOf('/'));
 
-        var wsUrl = '/ws';
+        var wsUrl = dir + '/ws';
 
         var stomp = Client.stomp = Stomp.over(new SockJS(wsUrl));
 

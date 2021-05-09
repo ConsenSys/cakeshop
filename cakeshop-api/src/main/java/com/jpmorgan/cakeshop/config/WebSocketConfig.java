@@ -43,7 +43,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
             .addEndpoint("ws")
             .setAllowedOrigins("*")
             .withSockJS()
-            .setClientLibraryUrl("/cakeshop/js/vendor/sockjs-1.0.3.min.js");
+            .setClientLibraryUrl("/cakeshop/js/vendor/sockjs-1.5.0.min.js");
     }
 
 }

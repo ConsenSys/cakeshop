@@ -127,7 +127,9 @@ export default class Manage extends Component {
         }).then(response => {
             if (response.status === 200) {
                 console.log("Success:", response.status, response.statusText);
-                window.location = "/";
+                var loc = window.location.pathname;
+                var dir = loc.substring(0, loc.lastIndexOf('/'));
+                window.location = dir + "/";
             } else {
                 console.log("Error:", response.status, response.statusText);
             }

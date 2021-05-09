@@ -39,6 +39,9 @@ public class AppStartup implements ApplicationListener<ApplicationEvent> {
     @Value("${server.port}")
     private String SERVER_PORT;
 
+    @Value("${server.servlet.context-path}")
+    private String CONTEXT_PATH;
+
     @Value("${nodejs.binary:node}")
     String nodeJsBinaryName;
 
@@ -124,7 +127,7 @@ public class AppStartup implements ApplicationListener<ApplicationEvent> {
         System.out.println("          version:     " + AppVersion.BUILD_VERSION);
         System.out.println("          build id:    " + AppVersion.BUILD_ID);
         System.out.println("          build date:  " + AppVersion.BUILD_DATE);
-        System.out.println("          Access the Cakeshop UI at: http://localhost:" + SERVER_PORT);
+        System.out.println("          Access the Cakeshop UI at: http://localhost:" + SERVER_PORT + CONTEXT_PATH);
     }
 
     public String getDebugInfo(ServletContext servletContext) {

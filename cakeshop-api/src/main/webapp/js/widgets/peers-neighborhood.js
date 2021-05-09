@@ -64,7 +64,7 @@ module.exports = function() {
 
 			_.each(hood, function(ip) {
 				var port = (window.location.port ? ':' + window.location.port : ''),
-					ep = window.location.protocol + '//' + ip + port + '/ws',
+					ep = window.location.protocol + '//' + ip + port + window.location.pathname + 'ws',
 					stomp = Stomp.over(new SockJS(ep));
 
 				stomp.debug = null;

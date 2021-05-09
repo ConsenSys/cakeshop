@@ -9,7 +9,11 @@
         var stompClient = null;
 
         function initilizeSocket() {
-            var socket = new SockJS('/ws');
+            var loc = window.location.href;
+            var dir = loc.substring(0, loc.lastIndexOf('/'));
+
+            var wsUrl = dir + '/ws';
+            var socket = new SockJS(wsUrl);
             stompClient = Stomp.over(socket);
             stompClient.connect({}, function (frame){});
         }

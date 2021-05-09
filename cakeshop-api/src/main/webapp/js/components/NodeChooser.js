@@ -69,7 +69,7 @@ export default class NodeChooser extends Component {
 
     onChange = (option, action, other) => {
         if (option.value === "manage") {
-            window.location = "/manage.html";
+            window.location = "manage.html";
             return;
         }
 

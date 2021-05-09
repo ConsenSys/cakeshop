@@ -38,7 +38,7 @@ The format of the JSON file is as follows:
 ]
 ```
 
-The rpcUrl field should be the RPC endpoint on the GoQuorum (geth) node, and the transactionManagerUrl should be the Tessera 3rd Party API endpoint. 
+The rpcUrl field should be the RPC endpoint on the GoQuorum (geth) node, and the transactionManagerUrl should be the Tessera 3rd Party API endpoint.
 
 Provide the location of the initial nodes file through application.properties or by using the `-D` flag mentioned above.
 ```sh
@@ -79,10 +79,13 @@ cakeshop.reporting.ui=http://localhost:3000
 # port to run on
 server.port=8080
 
+# context
+server.servlet.context-path=/
+
 #logging levels
 logging.level.root=WARN
 logging.level.org.springframework=INFO
 logging.level.com.jpmorgan.cakeshop=INFO
 ```
 
-See the [default config file](../cakeshop-api/src/main/resources/config/application.properties) for more. 
+See the [default config file](../cakeshop-api/src/main/resources/config/application.properties) for more.
